@@ -1,37 +1,29 @@
 # 🔍 Android Attack Surface Analyzer
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
-## ✨ Description
+A Python script to quickly identify potential attack surfaces in Android Applications by scanning the `AndroidManifest.xml` and related Smali code. 
 
-A Python tool for Android application security analysis. Scans `apktool` directories to identify exported components (highlighting unprotected ones), deeplinks (with potential query parameters hinted from Smali), and custom permissions from the `AndroidManifest.xml`. Designed for quick attack surface identification with formatted, colorized console output.
+<img width="628" alt="image" src="https://github.com/user-attachments/assets/32dc68d0-83c1-4950-976d-6c0fe4e7d405" />
 
-## 🤔 Why? The Data Speaks Volumes...
 
-Analyzing exported components and deeplinks remains crucial for Android application security. Public vulnerability data highlights their importance:
+Inspired by Ch0pin's Medusa/Mango tool: https://github.com/Ch0pin/medusa/wiki/Mango
 
-> Based on public HackerOne data (as of Apr 29, 2025, analyzing the last ~4 years):
->
-> * **Deeplinks:** Roughly **20%** of disclosed Android application bug bounty submissions appear related to deeplink handling.
-> * **IPC Components:** Approximately **45%** (~53 out of ~117 reviewed reports) seem related to vulnerabilities stemming from exposed IPC components (Activities, Services, Receivers, Providers) or insecure Intent handling triggered via deeplinks or other apps.
->
-> *(Source: Approximate statistics derived from searching disclosed Android reports on [HackerOne Hacktivity](https://hackerone.com/hacktivity/overview?queryString=asset_type%3A%28%22Android%3A+Play+Store%22+OR+%22Android%3A+.apk%22%29+AND+disclosed%3Atrue&sortField=latest_disclosable_activity_at&sortDirection=DESC&pageIndex=1))*
+## Requirements
 
-This tool aims to make identifying these common potential issues faster.
+* Python 3.x
+* Directory previously created by `apktool d <app.apk>` (must include `AndroidManifest.xml` and `smali*` folders for all features).
 
-## 🌱 Motivation & Acknowledgements
-
-This tool was inspired by the `show exposure` command found in Ch0pin's excellent [Medusa Framework (Mango)](https://github.com/Ch0pin/medusa/wiki/Mango). While Medusa/Mango offers a comprehensive suite of tools, the goal here was to create a more lightweight, standalone Python script focused specifically on identifying the initial attack surface (exported components, deeplinks) with minimal setup required beyond standard `apktool` output.
-
-Huge thanks to **Ch0pin** for the inspiration and the foundational work in this space!
-
-## 📋 Requirements
-
-* **Python 3.x**
-* An application directory previously decompiled using **`apktool d <app.apk>`**. (The directory needs `AndroidManifest.xml` and the `smali*` folders).
-
-## ▶️ Usage
-
-Run the script from your terminal, providing the path to the `apktool` decompiled directory as the main argument:
+## Usage
 
 ```bash
-python3 AASA.py /path/to/your/decompiled_app_directory
+python3 AASA.py /path/to/decompiled_apk_directory
+
+
+
+## Relevance (HackerOne Data)
+
+Public vulnerability data highlights why scanning these areas is important:
+
+* **Deeplinks:** ~20% of disclosed Android bug reports on HackerOne (last ~4 years ending Apr 2025) appear related to deeplinks.
+* **IPC Components:** ~45% seem related to exposed/insecure IPC components (Activities, Services, etc.) or Intent handling.
+
+*(Source: Approx. stats from [H1 Hacktivity Search](https://hackerone.com/hacktivity/overview?queryString=asset_type%3A%28%22Android%3A+Play+Store%22+OR+%22Android%3A+.apk%22%29+AND+disclosed%3Atrue&sortField=latest_disclosable_activity_at&sortDirection=DESC&pageIndex=1))*
