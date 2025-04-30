@@ -1,9 +1,10 @@
 # 🔍 Android Attack Surface Analyzer
 
-A Python script to quickly identify potential attack surfaces in Android Applications by scanning the `AndroidManifest.xml` and related Smali code. 
+- Quickly map Android applications' Inter-Process Communications (IPC) and deeplink attack surface directly from apktool output with minimal setup.
+- Provides potential query parameter name discovered via heuristic Smali scanning for specific deeplinks, reducing guesswork during testing.
+- 
 
 <img width="628" alt="image" src="https://github.com/user-attachments/assets/32dc68d0-83c1-4950-976d-6c0fe4e7d405" />
-
 
 Inspired by Ch0pin's Medusa/Mango tool: https://github.com/Ch0pin/medusa/wiki/Mango
 
@@ -16,8 +17,7 @@ Inspired by Ch0pin's Medusa/Mango tool: https://github.com/Ch0pin/medusa/wiki/Ma
 
 ```bash
 python3 AASA.py /path/to/decompiled_apk_directory
-
-
+```
 
 ## Relevance (HackerOne Data)
 
