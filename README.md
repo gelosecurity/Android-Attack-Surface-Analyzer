@@ -2,10 +2,13 @@
 
 - Quickly map Android applications' Inter-Process Communications (IPC) and deeplink attack surface directly from apktool output with minimal setup.
 - Provides potential query parameter name discovered via heuristic Smali scanning for specific deeplinks, reducing guesswork during testing.
+- Inspired by Ch0pin's Medusa/Mango tool: https://github.com/Ch0pin/medusa/wiki/Mango
 
-<img width="628" alt="image" src="https://github.com/user-attachments/assets/32dc68d0-83c1-4950-976d-6c0fe4e7d405" />
+<p align="center">
+  <img width="628" alt="Example tool output screenshot" src="https://github.com/user-attachments/assets/32dc68d0-83c1-4950-976d-6c0fe4e7d405" />
+</p>
 
-Inspired by Ch0pin's Medusa/Mango tool: https://github.com/Ch0pin/medusa/wiki/Mango
+
 
 ## Requirements
 
