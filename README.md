@@ -9,7 +9,6 @@
 ## Requirements
 
 * Python 3.x
-* Directory previously created by `apktool d <app.apk>` (must include `AndroidManifest.xml` and `smali*` folders for all features).
 
 ## Usage
 
