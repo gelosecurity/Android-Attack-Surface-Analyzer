@@ -2,7 +2,6 @@
 
 - Quickly map Android applications' Inter-Process Communications (IPC) and deeplink attack surface directly from apktool output with minimal setup.
 - Provides potential query parameter name discovered via heuristic Smali scanning for specific deeplinks, reducing guesswork during testing.
-- 
 
 <img width="628" alt="image" src="https://github.com/user-attachments/assets/32dc68d0-83c1-4950-976d-6c0fe4e7d405" />
 
