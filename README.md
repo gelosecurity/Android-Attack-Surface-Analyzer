@@ -1,6 +1,6 @@
 # 🔍 Android Attack Surface Analyzer
 
-- Quickly map Android applications' Inter-Process Communications (IPC) and deeplink attack surface directly from apktool output with minimal setup
+- Quickly map Android applications' IPC and deeplink attack surface directly from apktool output with minimal setup
 - Provides potential query parameter name discovered via heuristic Smali scanning for specific deeplink
 - Inspired by Ch0pin's Medusa/Mango tool: https://github.com/Ch0pin/medusa/wiki/Mango
 
