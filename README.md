@@ -4,10 +4,6 @@
 - Provides potential query parameter name discovered via heuristic Smali scanning for specific deeplinks, reducing guesswork during testing.
 - Inspired by Ch0pin's Medusa/Mango tool: https://github.com/Ch0pin/medusa/wiki/Mango
 
-<p align="center">
-  <img width="628" alt="Example tool output screenshot" src="https://github.com/user-attachments/assets/32dc68d0-83c1-4950-976d-6c0fe4e7d405" />
-</p>
-
 
 
 ## Requirements
@@ -20,6 +16,7 @@
 ```bash
 python3 AASA.py /path/to/decompiled_apk_directory
 ```
+<img width="628" alt="Example tool output screenshot" src="https://github.com/user-attachments/assets/32dc68d0-83c1-4950-976d-6c0fe4e7d405" />
 
 ## Relevance (HackerOne Data)
 
